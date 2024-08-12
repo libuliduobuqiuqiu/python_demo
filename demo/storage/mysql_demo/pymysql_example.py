@@ -15,7 +15,7 @@ class MysqlClient:
         self.setting = setting
         self.db_name = db_name
 
-    def __enter__(self):
+    def __enter__(self) -> pymysql.connections.Connection:
         self.connect = pymysql.connect(
             host=self.setting.HOST,
             user=self.setting.USERNAME,
