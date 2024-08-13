@@ -10,6 +10,7 @@ setting.py
 
 # 虚拟环境
 venv/*
+venv
 
 # 环境
 companyscript
