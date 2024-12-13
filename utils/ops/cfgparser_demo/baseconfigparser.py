@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import json
 import re
 
 
@@ -12,11 +11,11 @@ def parse_config(config: str):
     """
 
     config_item = config.splitlines()
-    next_dict = {}              # 用于指向父节点的value字典
-    line_dict = {}              # 保存每一行的节点信息
-    result_items = []           # 保存已解析的数据
-    parent_items = []           # 保存父节点路径
-    result_flag = 0             # 保存树的深度
+    next_dict = {}  # 用于指向父节点的value字典
+    line_dict = {}  # 保存每一行的节点信息
+    result_items = []  # 保存已解析的数据
+    parent_items = []  # 保存父节点路径
+    result_flag = 0  # 保存树的深度
 
     for line in config_item:
         item_dict = {}
@@ -40,12 +39,14 @@ def parse_config(config: str):
                 item_dict = {item_name: {}}
             result_flag += len(count_left)
 
-        if not count_left and not count_right and result_flag!=0:  # 不包含子节点的节点
+        if (
+            not count_left and not count_right and result_flag != 0
+        ):  # 不包含子节点的节点
             item = line.split()
             item_dict = {item[0]: " ".join(item[1:])}
 
         parent_dict = next_dict
-        for item in parent_items[:result_flag]:             # 向包含子项的节点移动
+        for item in parent_items[:result_flag]:  # 向包含子项的节点移动
             if next_items:
                 for key, value in next_items.items():
                     if item == key:

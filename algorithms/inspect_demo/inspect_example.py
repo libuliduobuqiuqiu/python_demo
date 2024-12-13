@@ -1,16 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import inspect
 import time
-from objprint import op
-import dis
-import sys
-
-
-def f():
-    frame = inspect.currentframe()
-    print(frame.f_back.f_code.co_filename)
-    print(frame.f_back.f_lineno)
 
 
 class Timer:
@@ -102,16 +92,13 @@ def gen(num):
 def f1(self):
     print(self.name)
 
+
 def __init__(self):
     self.name = "linshukai"
 
-temp_dict = {
-    "name": "linshukai",
-    "f": f1
-}
+
+temp_dict = {"name": "linshukai", "f": f1}
 
 B = type("A", (), temp_dict)
 print(B.__dict__, B.__name__)
 a = B()
-a.f()
-

@@ -3,7 +3,7 @@ import inspect
 import operator
 from inspect import Parameter, Signature
 
-from StandardLib.collectionsDemo import *
+from demos.standardlib.collection_demo import *
 
 
 def make_sig(*names):
@@ -69,9 +69,9 @@ class Singleton(type):
 
 
 class MyMeta(type):
-    def __init__(cls, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         print("My Meta")
-        super().__init__(cls, args, kwargs)
+        super().__init__(*args, **kwargs)
 
 
 class Spam(metaclass=Singleton):
@@ -99,5 +99,3 @@ if __name__ == "__main__":
     a.print_bar()
     b.Print_Bar()
 
-
-1

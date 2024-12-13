@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # 抽象工厂
 
-import abc
+from abc import ABC, abstractmethod
 
 
 class BYD:
@@ -24,12 +24,12 @@ class BYD_SUV:
         return "比亚迪SUV"
 
 
-class AbstractFactory(metaclass=abc.ABCMeta):
-    @abc.abstractmethod
+class AbstractFactory(ABC):
+    @abstractmethod
     def product_car(self):
         pass
 
-    @abc.abstractmethod
+    @abstractmethod
     def product_suv(self):
         pass
 
@@ -64,3 +64,4 @@ if __name__ == "__main__":
     bmw_factory = BmwFactory()
     print(bmw_factory.product_car())
     print(bmw_factory.product_suv())
+

@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 
 import asyncio
 import requests
-import time
 
 import asyncio
 import aiohttp
@@ -29,7 +28,6 @@ def get_bili():
 
     bs = BeautifulSoup(response.text, "html.parser")
     title = bs.find("title")
-    print(title.text)
 
 
 async def main():
@@ -41,7 +39,6 @@ async def main():
     for r in results:
         print(r)
 
+
 if __name__ == "__main__":
     asyncio.run(main())
-
-

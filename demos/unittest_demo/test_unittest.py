@@ -32,12 +32,12 @@ class MyTest(TestCase):
             all_task = [pool.submit(self.count) for _ in range(200)]
 
         concurrent.futures.wait(all_task)
-        self.assertEquals(self._num, 0)
+        self.assertEqual(self._num, 0)
 
 
 def use_logfile(logfile=None):
     if logfile is not None:
-        warnings.warn('logfile argument deprecated', DeprecationWarning)
+        warnings.warn("logfile argument deprecated", DeprecationWarning)
 
 
 if __name__ == "__main__":
