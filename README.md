@@ -1,4 +1,11 @@
 # Python Demo
+![Static Badge](https://img.shields.io/badge/build-Python3-green)
+![Static Badge](https://img.shields.io/badge/author-libuliduobuqiuqiu-blue)
+![GitHub Created At](https://img.shields.io/github/created-at/libuliduobuqiuqiu/python_demo)
+![GitHub last commit](https://img.shields.io/github/last-commit/libuliduobuqiuqiu/python_demo)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/libuliduobuqiuqiu/python_demo)
+![GitHub License](https://img.shields.io/github/license/libuliduobuqiuqiu/python_demo)
+
 
 一个简单的Python演示项目，主要包含了Python的关键功能和最佳实践，该项目主要作为学习、测试和实验的Python编程示例。
 
@@ -63,3 +70,7 @@ example_function()
 
 ## 贡献指南
 欢迎贡献代码！您可以通过提交 Issue 或 Pull Request 为项目做出贡献。
+
+
+## 许可证
+Released under the [MIT License](LICENSE).
